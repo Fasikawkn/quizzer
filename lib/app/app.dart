@@ -14,8 +14,10 @@ class QuizApp extends StatelessWidget {
     return ScreenUtilInit(
       designSize: const Size(428, 926),
       minTextAdapt: true,
+
       builder: (BuildContext context, child) => GetMaterialApp(
         getPages: AppPages.appPages,
+        debugShowCheckedModeBanner: false,
         theme: ThemeData(
           primarySwatch: generateMaterialColor(
             color: const Color(0xff06D2F6),

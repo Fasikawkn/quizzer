@@ -111,7 +111,19 @@ class AccountPage extends GetView<ProfileController> {
               ),
             );
           } else {
-            return const Center(child: Text('Something went wrong'));
+            return Column(
+              children: [
+                TextButton(
+                    onPressed: () {
+                      controller.logout();
+                    },
+                    child: const Text('Logout'),
+                    ),
+                const Center(
+                  child: Text('Something went wrong'),
+                ),
+              ],
+            );
           }
         }));
   }
